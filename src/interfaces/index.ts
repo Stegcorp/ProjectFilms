@@ -1,0 +1,7 @@
+export * from './obj.interface'
+export * from './genre.interface'
+export * from './movie.interface/movie.interface'
+export * from './movie.interface/production_companies.interface'
+export * from './movie.interface/production_countries.interface'
+export * from './movie-card.interface'
+export * from './movie.interface/movie_obj.interface'

@@ -1,0 +1,8 @@
+/*.main{*/
+/*    background-image: url("/my-app/src/assets/images/wp10615910-movie-collection-wallpapers.jpg");*/
+/*}*/
+body{
+    /*background: black;*/
+    opacity: 0.9;
+    background-image: url(../assets/images/wp10615910-movie-collection-wallpapers.jpg)
+}
