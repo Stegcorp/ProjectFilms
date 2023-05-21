@@ -11,7 +11,7 @@ const GenreBabgeZero: FC<IProps> = ({genre}) => {
     let genre_id = id;
     return (
         <div>
-            <Link to={`/genres/${name}?with_genres=${genre_id}`}>{name}</Link>
+            <Link to={`/genres/${name}?with_genres=${genre_id}&&page=1`}>{name}</Link>
         </div>
     );
 };

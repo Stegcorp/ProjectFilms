@@ -21,6 +21,9 @@ const MovieList: FC<IProps> = () => {
     return (
         <div>
             <div>{movie && movie.title}</div>
+            <div>{movie && movie.overview}</div>
+            <div>{movie && movie.tagline}</div>
+            <div>{movie && movie.vote_average}</div>
         </div>
     );
 };

@@ -1,7 +1,7 @@
 import {FC} from 'react';
 import css from './Pagination.module.css'
 import {useAppDispatch, useAppSelector} from "../../hooks";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useSearchParams} from "react-router-dom";
 import {movieActions} from "../../redux/slice";
 
 interface IProps {
@@ -10,21 +10,19 @@ interface IProps {
 
 const Pagination: FC<IProps> = () => {
     let {page} = useAppSelector(state => state.movieReducer);
-    // let [, setQuery] = useSearchParams();
     let navigate = useNavigate();
-
         let dispatch = useAppDispatch();
 
-    const prev = (): number => {
+    const [searchParams] = useSearchParams();
+    let gen = searchParams.get('with_genres');
+    const prev = () => {
         dispatch(movieActions.setPagination(page-1))
-        navigate(`?page=${page}`)
-        return page
+        navigate(`?with_genres=${gen}&&page=${page-1}`)
     }
 
-    const next= ():number => {
-        navigate(`?page=${page}`)
-        dispatch(movieActions.setPagination(page+1))
-        return page
+    const next=  () => {
+         dispatch(movieActions.setPagination(page+1))
+         navigate(`?with_genres=${gen}&&page=${page+1}`)
     }
 
     return (

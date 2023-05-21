@@ -18,19 +18,7 @@ const initialState: IState = {
     movie: null
 }
 
-const getAll = createAsyncThunk<IObj, void>(
-    'movieSlice/getAll',
-    async (_, {rejectWithValue}) => {
-        try {
-            const {data} = await movieService.getAll();
-            return data
-        } catch (e) {
-            const err = e as AxiosError
-            // @ts-ignore
-            return rejectWithValue(err.response.data)
-        }
-    }
-)
+
 
 const getById = createAsyncThunk<IMovie, { id: string | undefined }>(
     'movieSlice/getById',
@@ -45,11 +33,11 @@ const getById = createAsyncThunk<IMovie, { id: string | undefined }>(
         }
     }
 )
-const getByGenreId = createAsyncThunk<IObj, { gen: string | null, page: number }>(
-    'movieSlice/getByGenreId',
+const getAll = createAsyncThunk<IObj, { gen: string | null, page: string|null }>(
+    'movieSlice/getAll',
     async ({page, gen}, {rejectWithValue}) => {
         try {
-            const {data} = await movieService.getAllObj(page, gen);
+            const {data} = await movieService.getAll(page, gen);
             return data
         } catch (e) {
             const err = e as AxiosError
@@ -65,15 +53,11 @@ let slice = createSlice({
     initialState,
     reducers: {
         setPagination: (state, action)=> {
-                state.page =action.payload
+                state.page = action.payload
         }
     },
     extraReducers: builder => {
         builder
-            .addCase(getByGenreId.fulfilled, (state, action) => {
-                let {results} = action.payload;
-                state.movies = results
-            })
             .addCase(getAll.fulfilled, (state, action) => {
                 let {results} = action.payload;
                 state.movies = results
@@ -89,8 +73,7 @@ const {actions, reducer: movieReducer} = slice;
 const movieActions = {
     ...actions,
     getAll,
-    getById,
-    getByGenreId,
+    getById
 
 }
 

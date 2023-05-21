@@ -5,10 +5,8 @@ import {urls} from "../contains";
 import {IGenreObj} from "../interfaces/genre_obj.interface";
 
 class MovieService {
-    getAll(): IRes<IObj> {
-        return axiosService.get(urls.movies);
-    }
-    getAllObj(page: number = 1, gen?: string|null): IRes<IObj> {
+
+    getAll(page: string|null = "1", gen?: string|null): IRes<IObj> {
         return axiosService.get(`${urls.movies}?page=${page}&with_genres=${gen}`);
     }
     getById(id:string|undefined):IRes<IMovie>{
