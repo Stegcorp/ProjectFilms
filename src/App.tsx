@@ -6,12 +6,13 @@ import {MainLayout} from "./layouts";
 import {GenresPage, MoviePage, MoviesPage} from "./pages";
 
 
+
 function App() {
     return (
         <Routes>
             <Route path={'/'} element={<MainLayout/>}>
-                <Route path={'movies'} element={<MoviesPage/>}>
-                </Route>
+                <Route path={'movies'} element={<MoviesPage/>}/>
+                <Route path={'genres/:name'} element={<MoviesPage/>}/>
                 <Route path={'movies/:id'} element={<MoviePage/>}/>
                 <Route path={'genres'} element={<GenresPage/>}/>
             </Route>

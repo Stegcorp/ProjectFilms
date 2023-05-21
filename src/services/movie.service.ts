@@ -8,15 +8,15 @@ class MovieService {
     getAll(): IRes<IObj> {
         return axiosService.get(urls.movies);
     }
+    getAllObj(page: number = 1, gen?: string|null): IRes<IObj> {
+        return axiosService.get(`${urls.movies}?page=${page}&with_genres=${gen}`);
+    }
     getById(id:string|undefined):IRes<IMovie>{
         return axiosService.get(`${urls.movie}/${id}`)
     }
     getAllGenre(): IRes<IGenreObj>{
         return axiosService.get(urls.genres)
 }
-    getAllObj(page: number = 1, gen?: number): IRes<IObj> {
-        return axiosService.get(`${urls.movies}?page=${page}&with_genres=${gen}`);
-    }
 }
 
 export const movieService = new MovieService()

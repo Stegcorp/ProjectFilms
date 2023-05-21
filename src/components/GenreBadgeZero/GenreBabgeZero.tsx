@@ -1,18 +1,19 @@
 import {FC} from 'react';
 import {IGenre} from "../../interfaces";
+import {Link} from "react-router-dom";
 
-interface IProps{
-genre: IGenre
+interface IProps {
+    genre: IGenre
 }
 
-const GenreBabgeZero:FC<IProps>  = ({genre}) => {
-    let {name,id} = genre;
-
- return (
-  <div>
-   <div>{name}</div>
-  </div>
- );
+const GenreBabgeZero: FC<IProps> = ({genre}) => {
+    let {name, id} = genre;
+    let genre_id = id;
+    return (
+        <div>
+            <Link to={`/genres/${name}?with_genres=${genre_id}`}>{name}</Link>
+        </div>
+    );
 };
 
 export {GenreBabgeZero};

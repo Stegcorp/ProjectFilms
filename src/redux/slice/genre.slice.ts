@@ -29,20 +29,7 @@ const getAll = createAsyncThunk<IGenreObj, void>(
         }
     }
 )
-const getById = createAsyncThunk<IObj, { id: number }>(
-    'movieSlice/getById',
-    async ({id}, {rejectWithValue}) => {
-        try {
-            const {data} = await movieService.getAllObj(id);
-            console.log(data);
-            return data
-        } catch (e) {
-            const err = e as AxiosError
-            // @ts-ignore
-            return rejectWithValue(err.response.data)
-        }
-    }
-)
+
 
 let slice = createSlice({
     name: 'genreSlice',
@@ -54,13 +41,15 @@ let slice = createSlice({
                 let {genres} = action.payload;
                 state.genres = genres
             })
+
     }
 });
 const {actions, reducer: genreReducer} = slice;
 
 const genreActions = {
     ...actions,
-    getAll
+    getAll,
+
 }
 
 export {

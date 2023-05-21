@@ -8,9 +8,9 @@ interface IProps {
 
 const MovieListCard: FC<IProps> = ({movie}) => {
     let {original_title, overview, poster_path,id} = movie;
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     return (
-        <Link to={`${id}`} >
+        <Link to={`/movies/${id}`} >
             <div>{original_title}</div>
         </Link>
     );
