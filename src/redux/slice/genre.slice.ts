@@ -1,7 +1,7 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {movieService} from "../../services";
 import {AxiosError} from "axios";
-import {IGenre} from "../../interfaces";
+import {IGenre, IMovie, IObj} from "../../interfaces";
 import {IGenreObj} from "../../interfaces/genre_obj.interface";
 
 interface IState {
@@ -29,7 +29,20 @@ const getAll = createAsyncThunk<IGenreObj, void>(
         }
     }
 )
-
+const getById = createAsyncThunk<IObj, { id: number }>(
+    'movieSlice/getById',
+    async ({id}, {rejectWithValue}) => {
+        try {
+            const {data} = await movieService.getAllObj(id);
+            console.log(data);
+            return data
+        } catch (e) {
+            const err = e as AxiosError
+            // @ts-ignore
+            return rejectWithValue(err.response.data)
+        }
+    }
+)
 
 let slice = createSlice({
     name: 'genreSlice',

@@ -14,6 +14,9 @@ class MovieService {
     getAllGenre(): IRes<IGenreObj>{
         return axiosService.get(urls.genres)
 }
+    getAllObj(page: number = 1, gen?: number): IRes<IObj> {
+        return axiosService.get(`${urls.movies}?page=${page}&with_genres=${gen}`);
+    }
 }
 
 export const movieService = new MovieService()
