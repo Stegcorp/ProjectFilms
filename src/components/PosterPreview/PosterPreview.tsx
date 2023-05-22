@@ -1,15 +1,15 @@
 import {FC} from 'react';
 
-interface IProps{
-
+interface IProps {
+    image: string
+    name: string
 }
 
-const PosterPreview:FC<IProps>  = () => {
- return (
-  <div>
-   PosterPreview
-  </div>
- );
+const PosterPreview: FC<IProps> = ({image, name}) => {
+
+    return (
+        <div><img src={image} alt={name}/></div>
+    );
 };
 
 export {PosterPreview};

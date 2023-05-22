@@ -4,6 +4,7 @@ import './App.css';
 import {Route, Routes} from "react-router-dom";
 import {MainLayout} from "./layouts";
 import {GenresPage, MoviePage, MoviesPage} from "./pages";
+import {Search, SimpleLayout} from "./components";
 
 
 
@@ -11,6 +12,8 @@ function App() {
     return (
         <Routes>
             <Route path={'/'} element={<MainLayout/>}>
+                <Route path={'/'} element={<SimpleLayout/>}/>
+                <Route path={'/movies/search'} element={<MoviesPage/>}/>
                 <Route path={'movies'} element={<MoviesPage/>}/>
                 <Route path={'genres/:name'} element={<MoviesPage/>}/>
                 <Route path={'movies/:id'} element={<MoviePage/>}/>

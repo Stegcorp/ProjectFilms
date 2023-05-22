@@ -1,6 +1,6 @@
 import {FC} from 'react';
 import {IMovieCard} from "../../interfaces";
-import {Link, useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 interface IProps {
     movie: IMovieCard
@@ -8,7 +8,6 @@ interface IProps {
 
 const MovieListCard: FC<IProps> = ({movie}) => {
     let {original_title, overview, poster_path,id} = movie;
-    // const navigate = useNavigate();
     return (
         <Link to={`/movies/${id}`} >
             <div>{original_title}</div>

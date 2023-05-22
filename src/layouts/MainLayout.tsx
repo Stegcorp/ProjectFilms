@@ -11,7 +11,8 @@ interface IProps {
 
 const MainLayout: FC<IProps> = () => {
     return (
-        <div className={css.main}>
+        <div  className={css.main}>
+            <link rel="stylesheet" href="Normal.css"/>
             <Header/>
             <Outlet/>
         </div>

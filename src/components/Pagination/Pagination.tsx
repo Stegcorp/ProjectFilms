@@ -15,14 +15,15 @@ const Pagination: FC<IProps> = () => {
 
     const [searchParams] = useSearchParams();
     let gen = searchParams.get('with_genres');
+    let filmName = searchParams.get('query');
     const prev = () => {
         dispatch(movieActions.setPagination(page-1))
-        navigate(`?with_genres=${gen}&&page=${page-1}`)
+        navigate(`?with_genres=${gen}&&page=${page-1}&&query=${filmName}`)
     }
 
     const next=  () => {
          dispatch(movieActions.setPagination(page+1))
-         navigate(`?with_genres=${gen}&&page=${page+1}`)
+         navigate(`?with_genres=${gen}&&page=${page+1}&&query=${filmName}`)
     }
 
     return (

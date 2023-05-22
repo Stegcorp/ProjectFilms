@@ -8,3 +8,7 @@ export * from './PosterPreview/PosterPreview'
 export * from './UserInfo/UserInfo'
 export * from './GenreBadgeZero/GenreBabgeZero'
 export * from './Pagination/Pagination'
+export * from './Search/Search'
+export * from '../layouts/SimpleLayout/SimpleLayout'
+export * from './Video/VideoMovie'
+

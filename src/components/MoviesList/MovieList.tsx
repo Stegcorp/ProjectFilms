@@ -1,7 +1,8 @@
 import {FC, useEffect} from 'react';
-import {useParams, useSearchParams} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import {useAppDispatch, useAppSelector} from "../../hooks";
 import {movieActions} from "../../redux/slice";
+import {VideoMovie} from "../Video/VideoMovie";
 
 interface IProps {
 
@@ -11,7 +12,7 @@ interface IProps {
 const MovieList: FC<IProps> = () => {
     let {movie} = useAppSelector(state => state.movieReducer);
     let dispatch = useAppDispatch();
-    const {id} = useParams<{id:string}>();
+    const {id} = useParams<{ id: string }>();
 
     useEffect(() => {
 
@@ -22,7 +23,7 @@ const MovieList: FC<IProps> = () => {
         <div>
             <div>{movie && movie.title}</div>
             <div>{movie && movie.overview}</div>
-            <div>{movie && movie.tagline}</div>
+            <VideoMovie/>
             <div>{movie && movie.vote_average}</div>
         </div>
     );

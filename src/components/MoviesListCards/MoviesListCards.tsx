@@ -18,11 +18,16 @@ const MoviesListCards: FC<IProps> = () => {
     const [searchParams] = useSearchParams();
     let page = searchParams.get('page');
     let gen = searchParams.get('with_genres');
+    let filmName = searchParams.get('query');
 
 
     useEffect(() => {
+        if(filmName){
+        dispatch(movieActions.getSearch({page,filmName}))
+        }else {
         dispatch(movieActions.getAll({gen, page}))
-    }, [dispatch, gen,page])
+        }
+    }, [dispatch, gen,page,filmName])
 
     return (
         <div>

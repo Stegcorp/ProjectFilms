@@ -1,5 +1,4 @@
 
-
 export interface IMovieCard {
     poster_path: string,
     original_title: string,
