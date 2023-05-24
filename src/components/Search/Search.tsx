@@ -1,8 +1,8 @@
-import {FC, useEffect} from 'react';
+import {FC} from 'react';
 import {useForm} from "react-hook-form";
-import {useAppDispatch} from "../../hooks";
-import {movieActions} from "../../redux/slice";
-import {Link, useNavigate, useSearchParams} from "react-router-dom";
+import {useNavigate, useSearchParams} from "react-router-dom";
+
+import css from './Search.module.css'
 
 interface IProps {
 
@@ -21,8 +21,8 @@ const Search: FC<IProps> = () => {
         reset()
     }
     return (
-        <form onSubmit={handleSubmit(formSearch)}>
-           <input type="text" placeholder={'Search for a movie'} onKeyDown={() => formSearch} {...register("filmName")}/>
+        <form  onSubmit={handleSubmit(formSearch)}>
+           <input className={css.input} type="text" placeholder={'  Search for a movie'} onKeyDown={() => formSearch} {...register("filmName")}/>
         </form>
     );
 };

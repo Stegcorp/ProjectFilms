@@ -4,7 +4,7 @@ import './App.css';
 import {Route, Routes} from "react-router-dom";
 import {MainLayout} from "./layouts";
 import {GenresPage, MoviePage, MoviesPage} from "./pages";
-import {Search, SimpleLayout} from "./components";
+import {SimpleLayout} from "./components";
 
 
 

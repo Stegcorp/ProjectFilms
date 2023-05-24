@@ -1,7 +1,7 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {movieService} from "../../services";
 import {AxiosError} from "axios";
-import {IMovie, IMovieCard, IObj, IResults, IVideo} from "../../interfaces";
+import {IMovie, IMovieCard, IObj, IVideo} from "../../interfaces";
 
 interface IState {
     movies: IMovieCard[],
@@ -81,6 +81,7 @@ let slice = createSlice({
     reducers: {
         setPagination: (state, action) => {
             state.page = action.payload
+            console.log(state.page);
         }
     },
     extraReducers: builder => {
@@ -97,7 +98,6 @@ let slice = createSlice({
             })
             .addCase(getSearch.fulfilled, (state, action) => {
                 let {results} = action.payload;
-                console.log(results);
                 state.movies = results
             })
 

@@ -14,6 +14,10 @@ const MovieList: FC<IProps> = () => {
     let dispatch = useAppDispatch();
     const {id} = useParams<{ id: string }>();
 
+    // window.onpopstate = function(event) {
+    // window.history.back()
+    // };
+    // console.log(window);
     useEffect(() => {
 
         dispatch(movieActions.getById({id}))

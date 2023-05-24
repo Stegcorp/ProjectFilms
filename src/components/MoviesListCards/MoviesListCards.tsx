@@ -4,6 +4,7 @@ import {useSearchParams} from "react-router-dom";
 
 import {MovieListCard} from "../MoviesListCard/MovieListCard";
 import {movieActions} from "../../redux/slice";
+import css from './MoviesListCards.module.css'
 
 interface IProps {
 
@@ -30,7 +31,7 @@ const MoviesListCards: FC<IProps> = () => {
     }, [dispatch, gen,page,filmName])
 
     return (
-        <div>
+        <div className={css.listMovies}>
             {movies && movies.map(movie => <MovieListCard key={movie.id} movie={movie}/>)}
         </div>
 

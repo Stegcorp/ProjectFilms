@@ -1,0 +1,7 @@
+.genre{
+    display: flex;
+    flex-wrap: wrap;
+    width: 830px;
+    column-gap: 20px;
+    row-gap: 20px;
+}

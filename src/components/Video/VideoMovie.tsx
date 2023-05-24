@@ -23,7 +23,7 @@ const VideoMovie: FC<IProps> = () => {
         array.push(value.key)
     })
         let key = array[0];
-    console.log(key);
+
 
     const opts:string = `https://www.youtube.com/embed/${key}?enablejsapi=1&origin=http://localhost:3000`
 
@@ -34,8 +34,7 @@ const VideoMovie: FC<IProps> = () => {
             <iframe id="player"
                     src={opts}
                     width="640"
-                    height="360"
-                    frameBorder="0"></iframe>
+                    height="360"></iframe>
         </div>
     );
 };

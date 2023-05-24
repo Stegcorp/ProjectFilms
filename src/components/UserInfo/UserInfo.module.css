@@ -1,0 +1,7 @@
+.userInfo{
+    width: 40px;
+    height: 40px;
+    background-image: url("Blue-Big-Bird-Final-Logo.png") ;
+    border-radius: 50%;
+    cursor: pointer;
+}

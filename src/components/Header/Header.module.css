@@ -10,3 +10,68 @@ background: none;
     row-gap: 15px;
     column-gap: 30px;
 }
+.miracle{
+    text-decoration: none;
+    font-family: cursive;
+    font-size: 25px;
+
+}
+.colorSnow {
+    color: snow;
+}
+.colorBlack{
+    color: black;
+}
+
+.filmList{
+    text-decoration: none;
+    font-family: cursive;
+
+}
+
+.button{
+    width: 100px;
+    height: 30px;
+    background: orange;
+    border: 1px solid orange;
+    border-radius: 10px;
+}
+.button:hover {
+    background-color:orange;
+    transition: 0.7s;
+}
+.btn3 {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin: 0 15px 15px 0;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    background-color: darkorange;
+    box-shadow: 0 2px orange;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    vertical-align: top;
+}
+.btn3:hover {
+    background-color: #002fed;
+}
+.btn3:active {
+    background-color: darkorange !important;
+}
+.btn3:focus-visible {
+    box-shadow: 0 0 0 3px lightskyblue;
+}
+.btn3:disabled {
+    background-color: #6c87b5;
+    pointer-events: none;
+}

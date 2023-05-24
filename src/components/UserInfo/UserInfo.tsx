@@ -1,4 +1,5 @@
 import {FC} from 'react';
+import css from './UserInfo.module.css'
 
 interface IProps{
 
@@ -6,8 +7,8 @@ interface IProps{
 
 const UserInfo:FC<IProps>  = () => {
  return (
-  <div>
-   UserInfo
+  <div className={css.userInfo}>
+
   </div>
  );
 };

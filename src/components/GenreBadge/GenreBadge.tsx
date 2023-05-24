@@ -1,7 +1,9 @@
 import {FC, useEffect} from 'react';
 import {useAppDispatch, useAppSelector} from "../../hooks";
+
 import {genreActions} from "../../redux/slice";
 import {GenreBabgeZero} from "../GenreBadgeZero/GenreBabgeZero";
+import css from './GenreBadge.module.css'
 
 
 interface IProps {
@@ -19,7 +21,7 @@ const GenreBadge: FC<IProps> = () => {
 
 
     return (
-        <div>
+        <div className={css.genre}>
             {genres && genres.map(value => <GenreBabgeZero key={value.id} genre={value}/>)}
         </div>
     );
