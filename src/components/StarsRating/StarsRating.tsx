@@ -1,7 +1,8 @@
 import {FC} from 'react';
 
-import ReactStars from 'react-stars'
+
 import React from 'react'
+import ReactStars from 'react-stars';
 
 
 interface IProps {
