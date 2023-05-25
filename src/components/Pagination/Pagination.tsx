@@ -19,21 +19,31 @@ const Pagination: FC<IProps> = () => {
     const [searchParams] = useSearchParams();
     let gen = searchParams.get('with_genres');
     let filmName = searchParams.get('query');
-    if (!filmName) {
 
-    }
     const prev = () => {
         dispatch(movieActions.setPagination(page - 1))
+        if(filmName!==null){
+        navigate(`?with_genres=${gen}&&page=${page - 1}&&query=${filmName}`)
+        }else {
         navigate(`?with_genres=${gen}&&page=${page - 1}`)
+        }
     }
 
     const next = () => {
         dispatch(movieActions.setPagination(page + 1))
+        if (filmName!==null){
+        navigate(`?with_genres=${gen}&&page=${page + 1}&&query=${filmName}`)
+        }else {
         navigate(`?with_genres=${gen}&&page=${page + 1}`)
+        }
     }
     const pageNow = (num:any) => {
-        let {page} = num;
-        navigate(`?with_genres=${gen}&&page=${page}`)
+       let {page} = num;
+        if(filmName!==null){
+            navigate(`?with_genres=${gen}&&page=${page}&&query=${filmName}`)
+        }else {
+            navigate(`?with_genres=${gen}&&page=${page}`)
+        }
         dispatch(movieActions.setPagination(+page))
         reset()
     }

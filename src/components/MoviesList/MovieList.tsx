@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom';
 import {useAppDispatch, useAppSelector} from "../../hooks";
 import {movieActions} from "../../redux/slice";
 import {VideoMovie} from "../Video/VideoMovie";
+import StarRatings from "react-star-ratings";
 
 interface IProps {
 
@@ -28,6 +29,7 @@ const MovieList: FC<IProps> = () => {
             <div>{movie && movie.title}</div>
             <div>{movie && movie.overview}</div>
             <VideoMovie/>
+            <StarRatings/>
             <div>{movie && movie.vote_average}</div>
         </div>
     );

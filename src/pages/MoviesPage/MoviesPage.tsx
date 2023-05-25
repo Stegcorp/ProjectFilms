@@ -13,8 +13,9 @@ const MoviesPage: FC<IProps> = () => {
     let dispatch = useAppDispatch();
     return (
         <div className={css.movies}>
-            <Link to={'/genres'} className={css.linkGenres} onClick={() => dispatch(movieActions.setPagination(1))}>GENRES</Link>
+        <div className={css.center}>    <Link to={'/genres'} className={css.linkGenres} onClick={() => dispatch(movieActions.setPagination(1))}>GENRES</Link></div>
             <Pagination/>
+            <div ><p className={css.moviesText}>Movies</p></div>
             <MoviesListCards/>
         </div>
     );

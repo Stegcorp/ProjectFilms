@@ -6,9 +6,8 @@ interface IProps {
 }
 
 const PosterPreview: FC<IProps> = ({image, name}) => {
-
     return (
-        <div><img src={image} alt={name}/></div>
+        <div><img src={"https://image.tmdb.org/t/p/w500/"+image} alt={name} width='105px'/></div>
     );
 };
 

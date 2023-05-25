@@ -1,16 +1,17 @@
 import {FC} from 'react';
 
-interface IProps{
-
+import css from './MovieInfo.module.css'
+interface IProps {
+    overview: string
 }
 
-const MovieInfo:FC<IProps>  = () => {
+const MovieInfo: FC<IProps> = ({overview}) => {
 
- return (
-  <div>
-   MovieInfo
-  </div>
- );
+    return (
+        <div className={css.text}>
+            <p className={css.pex}>{overview}</p>
+        </div>
+    );
 };
 
 export {MovieInfo};

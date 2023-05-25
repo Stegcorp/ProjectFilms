@@ -1,4 +1,7 @@
 .listMovies{
     display: flex;
-    
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 45px;
+    row-gap: 25px;
 }

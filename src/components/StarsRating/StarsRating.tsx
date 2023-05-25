@@ -9,22 +9,21 @@ interface IProps {
 }
 
 
-
-document.getElementById('where-to-render')
-
 const StarsRating: FC<IProps> = () => {
 
+    let elementById = document.getElementById('where-to-render');
     const ratingChanged = (newRating: number) => {
-
+        console.log(newRating)
+    console.log(elementById);
     }
 
     return (
         <div>
             <ReactStars
-                count={10}
+                count={5}
                 onChange={ratingChanged}
                 size={24}
-                color2={'#ffd700'} value={5.6}/>
+                color2={'#ffd700'}/>
         </div>
     );
 };

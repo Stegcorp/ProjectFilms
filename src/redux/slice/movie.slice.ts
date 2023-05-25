@@ -81,7 +81,6 @@ let slice = createSlice({
     reducers: {
         setPagination: (state, action) => {
             state.page = action.payload
-            console.log(state.page);
         }
     },
     extraReducers: builder => {

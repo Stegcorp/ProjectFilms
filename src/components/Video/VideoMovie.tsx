@@ -31,10 +31,11 @@ const VideoMovie: FC<IProps> = () => {
 
     return (
         <div>
-            <iframe id="player"
-                    src={opts}
-                    width="640"
-                    height="360"></iframe>
+
+            {/*<iframe id="player"*/}
+            {/*        src={opts}*/}
+            {/*        width="640"*/}
+            {/*        height="360"></iframe>*/}
         </div>
     );
 };

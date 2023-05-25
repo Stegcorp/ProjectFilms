@@ -1,0 +1,18 @@
+.text{
+
+    max-height: 120px;
+    font-size: 15px;
+    padding-top: 14px;
+}
+.text p{
+
+    margin: 0;
+    color: white;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    width: 225px;
+    text-decoration-line: none;
+}
+
