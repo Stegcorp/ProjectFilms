@@ -1,15 +1,21 @@
 .movies {
-    background: black;
     width: 100%;
-    color: snow;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-
+.themeBlack{
+    background: black;
+    color: snow;
+}
+.themeSnow{
+    background: snow;
+    color: black;
+}
 .linkGenres {
     width: 300px;
-    color: snow;
+    height: 23px;
+    /*color: snow;*/
     text-decoration: none;
     font-size: 17px;
     display: flex;
@@ -17,7 +23,11 @@
     font-family: sans-serif;
     padding-bottom: 15px;
     padding-top: 15px;
-
+}
+.linkGenres:hover{
+    text-shadow: 3px 5px 6px gold, -6px -7px 6px #87e0fd;
+    color: darkred;
+    font-size: 20px;
 }
 
 .moviesText {

@@ -8,27 +8,44 @@
     color: snow;
     background: #2a2a2a;
 }
+.moviesForm:hover{
+    background: radial-gradient(ellipse at bottom, #87e0fd 0%,#01262b 55%);
+}
 .title{
     font-size: 16px;
     width: 80%;
     font-family: sans-serif;
-
+}
+.title:hover{
+    text-shadow: 3px 5px 6px white, -6px -7px 6px #f1ffff;
 }
 .text{
-    height: 104px;
+    height: 130px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    padding-top: 10px;
+    margin-top: 30px;
     width: 230px;
     padding-left: 15px;
+    column-gap: 14px;
+    row-gap: 10px;
 }
-.text:hover{
-    text-shadow: 3px 5px 6px white, -6px -7px 6px #f1ffff;
-}
+
 .image{
     padding-top: 24px;
     padding-left: 18px;
 
+}
+.overview:hover{
+    text-shadow: 3px 5px 6px white, -6px -7px 6px #f1ffff;
+}
+.overview{
+    margin: 0; /* Убираем внешний отступ */
+    -webkit-line-clamp: 3; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden;
+    width: 225px;
+    font-size: 15px;
 }

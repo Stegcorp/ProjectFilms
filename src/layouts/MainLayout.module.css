@@ -2,14 +2,24 @@
     /*background-image: url("../assets/images/wp10615910-movie-collection-wallpapers.jpg") ;*/
     width:100%;
     height: 650px;
-    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url("../assets/images/wp10615910-movie-collection-wallpapers.jpg");
+
+}
+.whiteMait{
+    background: linear-gradient( rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.7)), url("../assets/images/wp10615910-movie-collection-wallpapers.jpg");
+    color: #00010e;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: top;
 }
-
-
+.blackMail{
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url("../assets/images/wp10615910-movie-collection-wallpapers.jpg");
+    color: snow;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+}
 
 *{
     margin: 0;

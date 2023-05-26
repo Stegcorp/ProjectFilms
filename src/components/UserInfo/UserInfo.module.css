@@ -4,4 +4,5 @@
     background-image: url("Blue-Big-Bird-Final-Logo.png") ;
     border-radius: 50%;
     cursor: pointer;
+    border: 2px solid black;
 }

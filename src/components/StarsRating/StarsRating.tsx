@@ -5,26 +5,30 @@ import React from 'react'
 import ReactStars from 'react-stars';
 
 
-interface IProps {
 
+interface IProps {
+    star: number|undefined;
+    sizeStar: number
+    colorStar:string
+    edit:boolean
 }
 
 
-const StarsRating: FC<IProps> = () => {
+const StarsRating: FC<IProps> = ({star,sizeStar,edit,colorStar}) => {
 
-    let elementById = document.getElementById('where-to-render');
-    const ratingChanged = (newRating: number) => {
-        console.log(newRating)
-    console.log(elementById);
-    }
+
+document.getElementById('where-to-render');
+
 
     return (
         <div>
             <ReactStars
-                count={5}
-                onChange={ratingChanged}
-                size={24}
-                color2={'#ffd700'}/>
+                count={10}
+                size={sizeStar}
+                value={star}
+                edit={edit}
+                color1="darkslategray"
+                color2={colorStar}/>
         </div>
     );
 };

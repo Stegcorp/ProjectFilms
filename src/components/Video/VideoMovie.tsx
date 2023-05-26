@@ -9,8 +9,10 @@ interface IProps {
 }
 
 const VideoMovie: FC<IProps> = () => {
-    let dispatch = useAppDispatch();
     let {video} = useAppSelector(state => state.movieReducer);
+
+    let dispatch = useAppDispatch();
+
     let {id} = useParams();
 
 
@@ -18,25 +20,21 @@ const VideoMovie: FC<IProps> = () => {
         dispatch(movieActions.videoById({id}))
     }, [dispatch])
 
-    let array:any[]=[]
+    let array: any[] = []
+
     video.results?.map(value => {
         array.push(value.key)
     })
-        let key = array[0];
+    let key = array[0]
 
 
-    const opts:string = `https://www.youtube.com/embed/${key}?enablejsapi=1&origin=http://localhost:3000`
 
+    const opts: string = `https://www.youtube.com/embed/${key}?enablejsapi=1&origin=http://localhost:3000`
 
 
     return (
-        <div>
-
-            {/*<iframe id="player"*/}
-            {/*        src={opts}*/}
-            {/*        width="640"*/}
-            {/*        height="360"></iframe>*/}
-        </div>
+            <iframe width="400" height="250" src={opts}
+                    allow="autoplay; encrypted-media" allowFullScreen></iframe>
     );
 };
 

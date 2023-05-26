@@ -6,6 +6,13 @@
     justify-content: space-around;
     align-items: center;
     margin-bottom: 15px;
+    color: snow;
+}
+.colorBlack{
+    color: black;
+}
+.colorSnow{
+    color: snow;
 }
 .btn5 {
     display: inline-block;
@@ -20,8 +27,8 @@
     font-size: 17px;
     font-weight: 600;
     text-decoration: none;
-    color: #00010e;
-    background-color: #e7f3ff;
+    /*color: snow;*/
+    background-color: #666;
     cursor: pointer;
     user-select: none;
     appearance: none;
@@ -31,7 +38,7 @@
     box-shadow: 0 0 0 2px #666;
 }
 .btn5:hover {
-    background-color: #DBE7F2;
+    background-color: #0f5265;
 }
 .btn5:active {
     transform: scale(0.96);

@@ -7,8 +7,9 @@ interface IState {
     movies: IMovieCard[],
     page: number;
     trigger: boolean
-    movie: IMovie | null
+    movie: IMovie
     video: IVideo
+    switcher: boolean;
 
 }
 
@@ -16,8 +17,9 @@ const initialState: IState = {
     movies: [],
     page: 1,
     trigger: false,
-    movie: null,
-    video: {}
+    movie: {},
+    video: {},
+    switcher: false
 }
 
 
@@ -81,6 +83,9 @@ let slice = createSlice({
     reducers: {
         setPagination: (state, action) => {
             state.page = action.payload
+        },
+        switcher: (state) => {
+            state.switcher = !state.switcher
         }
     },
     extraReducers: builder => {

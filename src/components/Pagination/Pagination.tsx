@@ -4,6 +4,7 @@ import {useAppDispatch, useAppSelector} from "../../hooks";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {movieActions} from "../../redux/slice";
 import {useForm} from "react-hook-form";
+import classNames from "classnames";
 
 interface IProps {
 
@@ -12,7 +13,7 @@ interface IProps {
 const Pagination: FC<IProps> = () => {
     let {handleSubmit, register, reset} = useForm();
 
-    let {page} = useAppSelector(state => state.movieReducer);
+    let {page,switcher} = useAppSelector(state => state.movieReducer);
     let navigate = useNavigate();
     let dispatch = useAppDispatch();
 
@@ -51,7 +52,7 @@ const Pagination: FC<IProps> = () => {
     return (
         <div className={css.pagination}>
             <div>
-                <button className={css.btn5} disabled={page === 1} onClick={() => {
+                <button className={classNames(css.btn5,switcher?css.colorSnow:css.colorBlack)} disabled={page === 1} onClick={() => {
                     prev()
                 }}><b>PREV PAGE</b></button>
             </div>
@@ -61,7 +62,7 @@ const Pagination: FC<IProps> = () => {
             </form>
 
             <div>
-                <button className={css.btn5} disabled={page === 500} onClick={() => {
+                <button className={classNames(css.btn5,switcher?css.colorSnow:css.colorBlack)} disabled={page === 500} onClick={() => {
                     next()
                 }}><b>NEXT PAGE</b></button>
             </div>

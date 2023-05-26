@@ -1,6 +1,5 @@
 .decor{
     /*text-decoration: none;*/
-    color: snow;
     font-size: 30px;
     font-family: cursive;
     text-decoration: darkred;
@@ -14,4 +13,10 @@
 }
 span:hover{
     color: #1ed212;
+}
+.colorSnow{
+    color: snow;
+}
+.colorBlack{
+    color: #00010e;
 }

@@ -4,6 +4,7 @@ background: none;
     justify-content: space-around;
     padding-top: 15px;
     padding-bottom: 15px;
+    color: white;
 }
 .leftGroup{
     display: flex;
@@ -21,6 +22,7 @@ background: none;
 }
 .colorBlack{
     color: black;
+    font-weight:900;
 }
 
 .filmList{
@@ -53,7 +55,6 @@ background: none;
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
-    color: #fff;
     background-color: darkorange;
     box-shadow: 0 2px orange;
     cursor: pointer;
@@ -63,7 +64,8 @@ background: none;
     vertical-align: top;
 }
 .btn3:hover {
-    background-color: #002fed;
+    background-color: #00010e;
+    color: snow;
 }
 .btn3:active {
     background-color: darkorange !important;

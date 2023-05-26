@@ -1,24 +1,34 @@
-.simple{
+.simple {
     display: flex;
     justify-content: end;
     align-items: center;
-    height: 450px ;
+    height: 450px;
     width: 100%;
     flex-direction: column;
+}
+
+.colorSnow {
     color: snow;
 }
-.title1{
+
+.colorBlack {
+    color: black;
+    font-weight: 600
+}
+
+.title1 {
     font-family: system-ui;
     font-size: 50px;
     margin-bottom: 25px;
     font-weight: 500
 }
-.title2{
+
+.title2 {
     font-family: system-ui;
     font-size: 30px;
 }
 
-.view{
+.view {
     display: flex;
     justify-content: center;
     flex-direction: column;
